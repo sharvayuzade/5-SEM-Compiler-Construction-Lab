@@ -1,0 +1,13 @@
+gedit prac.l
+lex prac.l
+gcc lex.yy.c -o prac
+./prac   test.c
+
+
+
+gedit p.l
+gedit p.y
+lex p.l
+yacc -d p.y
+gcc y.tab.c lex.yy.c -o postfix -lfl
+./postfix
